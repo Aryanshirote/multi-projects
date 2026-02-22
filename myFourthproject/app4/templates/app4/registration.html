@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body>
+    <h1> Registration Page </h1>
+   
+    <form style="text-align:center;" action="{% url 'user_registration' %}" method="POST">
+         {% csrf_token %}
+        <input type="text" placeholder="Enter username" name="username"/></br></br>
+        <input type="email" placeholder="Enter email" name="email"/></br></br>
+        <input type="password" placeholder="Password" name="password"/></br></br>
+        <input type="password" placeholder="Confirm Password"name="confirm_password" /></br></br>
+        <button value="submit">Submit </Button>
+            {% if error %}
+                <p style="color:red;">{{ error }}</p>
+            {% endif %}
+            {% if success %}
+                <p style="color:green;">{{ sucess }}</p>
+            {% endif %}
+    </form>
+    
+</body>
+</html>
+
+<style>
+    form {
+        margin-top: 100px;
+        margin-left: 400px;
+        margin-right: 400px;
+        background-color: grey;
+        padding: 50px;
+        border-radius:10px;
+    }
+    
