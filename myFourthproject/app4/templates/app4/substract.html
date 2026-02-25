@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substraction</title>
+</head>
+<body>
+     <form style="text-align:center;" action="{% url 'substract'%}" method='POST'> 
+        {% csrf_token %}
+        NUMBER 1: <input type="number" placeholder="number 1" name="num1"><br>
+        NUMBER 2: <input type="number" placeholder="number 2" name="num2"><br>
+        <button type="submit"> Compute </button>
+
+        {% if result1 %}
+            <h4 style="color:red;"> {{result1}} </h4>
+        {% endif %}
+    
+</body>
+</html>

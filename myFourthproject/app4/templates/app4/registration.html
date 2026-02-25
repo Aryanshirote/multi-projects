@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Registration Page</title>
+    <header>
+    <a href="login.html" value="login"> <a/>
+</header>
 </head>
+
 <body>
     <h1> Registration Page </h1>
    
@@ -15,13 +19,15 @@
         <input type="password" placeholder="Password" name="password"/></br></br>
         <input type="password" placeholder="Confirm Password"name="confirm_password" /></br></br>
         <button value="submit">Submit </Button>
-            {% if error %}
-                <p style="color:red;">{{ error }}</p>
-            {% endif %}
-            {% if success %}
-                <p style="color:green;">{{ sucess }}</p>
-            {% endif %}
     </form>
+    <div id="div1" style="text-align:center;">
+         {% if error %}
+                <p style="color:red;">{{ error }}</p>
+        {% endif %}
+        {% if Success %}
+                <p style="color:green;">{{ Success }}</p>
+        {% endif %}
+    </div>
     
 </body>
 </html>

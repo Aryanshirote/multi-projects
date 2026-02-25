@@ -7,9 +7,15 @@
 </head>
 <body style="background: white;">
     <div>
-    <input type="text" placeholder="Enter your name"/> </br>
-    <input type="password" placeholder="Enter your password"/></br>
-    <input type="Submit" value="submit">
+        <form action="{%url 'login'%}" method="POST">
+            {% csrf_token %}
+        <input type="text" placeholder="Enter your name"/> </br>
+        <input type="password" placeholder="Enter your password"/></br>
+        <input type="Submit" value="submit">
+        </form>
+    </div>
+    <div id="div1">
+        
     </div>
 </body>
 </html>
